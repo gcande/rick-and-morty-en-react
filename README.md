@@ -1,4 +1,4 @@
-direccion del servidor: https://gabriel-cande-api.netlify.app/
+direccion del servidor: 
 
 # Getting Started with Create React App
 
