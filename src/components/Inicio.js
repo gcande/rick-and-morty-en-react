@@ -47,11 +47,11 @@ export const Inicio = () => {
 
   return (
     <>
-    <div className='flex justify-between items-center'>
-      <h1 className='text-3xl font-bold py-2 text-white sombra'>Rick and Morty Api</h1>
+    <div className='flex justify-around items-center'>
+      <h1 className='text-2xl sm:text-3xl font-bold py-2 text-white sombra'>Rick and Morty Api</h1>
       <Busqueda capturaInput={capturaInput} busqueda={busqueda} />
     </div>
-    <div className='text-center my-3'>
+    <div className='text-center my-3 mx-3'>
       <p >Es una pagina web que te ayuda a conocer algunos de los personajes de la saga de rick and morty</p>
       <p > Este proyecto fue realizado en <span className='text-blue-700 font-bold'>React</span> y <span className='text-blue-700 font-bold'>Tailwindcss</span></p>        
     </div>
