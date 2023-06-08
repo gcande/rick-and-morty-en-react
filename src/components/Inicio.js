@@ -73,7 +73,7 @@ export const Inicio = () => {
       ))
     ) : ('no hay')}
     </div>
-    <Paginacion prevFuncion={prevFuncion} nextFuncion={nextFuncion} />
+    {/* <Paginacion prevFuncion={prevFuncion} nextFuncion={nextFuncion} /> */}
     </>
     
   )
