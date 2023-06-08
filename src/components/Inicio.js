@@ -48,7 +48,7 @@ export const Inicio = () => {
   return (
     <>
     <div className='flex justify-between items-center'>
-      <h1 className='text-3xl font-bold text-green-600 hover:text-green-400 py-2'>Rick and Morty Api</h1>
+      <h1 className='text-3xl font-bold py-2 text-white sombra'>Rick and Morty Api</h1>
       <Busqueda capturaInput={capturaInput} busqueda={busqueda} />
     </div>
     <div className='text-center my-3'>
