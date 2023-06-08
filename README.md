@@ -1,4 +1,4 @@
-direccion del servidor: 
+direccion del servidor: https://gabriel-rickandmorty.netlify.app/
 
 # Getting Started with Create React App
 
