@@ -61,7 +61,7 @@ export const Inicio = () => {
     {personajes != null ? (
       resulBusque.map(personaje =>(
         <div key={personaje.id} className='flex justify-end overflow-hidden relative items-center w-[290px] h-[100px] border shadow-2xl rounded-lg bg-gray-900 text-white hover:bg-slate-100 hover:text-black'> 
-          <img className='absolute -left-8 shadow-xl w-[130px] rounded-full' src={personaje.image} alt={personaje.name} />
+          <img className='absolute -left-8 shadow-xl w-[130px] rounded-full border-2 border-white' src={personaje.image} alt={personaje.name} />
           
           <div className='flex flex-col items-center gap-1 mr-4 text-center'>
             <p className='text-[15px] font-bold w-40 truncate overflow-hidden' >{personaje.id} - {personaje.name}</p>
