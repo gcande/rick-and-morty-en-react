@@ -65,15 +65,15 @@ export const Inicio = () => {
           <span className="text-blue-700 font-bold">Tailwindcss</span>
         </p>
       </div>
-
       <Paginacion prevFuncion={prevFuncion} nextFuncion={nextFuncion} prev={info.prev} next={info.next} />
+
 
       <div className="flex flex-row flex-wrap justify-center gap-x-11 gap-y-5 ">
         {personajes != null
           ? resulBusque.map((personaje) => (
               <div
                 key={personaje.id}
-                className="tooltip flex justify-end overflow-visible relative items-center w-[290px] h-[100px] border shadow-2xl 
+                className=" flex justify-end overflow-visible relative items-center w-[290px] h-[100px] border shadow-2xl 
                             rounded-lg bg-gray-900 text-white "
               >
                 <img
@@ -82,18 +82,21 @@ export const Inicio = () => {
                   alt={personaje.name}
                 /> 
 
-                {/* tooltip */}
-                <div className="tooltiptext flex-row justify-center w-[180px]  ">
-                  <img src={personaje.image} alt={personaje.name}
-                        className="w-[100px] rounded-full shadow-xl shadow-gray-500 m-auto" />
-                  <strong>{`${personaje.name}`}</strong><br/>
-                  <small>{` ${personaje.species}`}</small><br/><br/>
-                </div>
+                
 
                 <div className="flex flex-col items-center gap-1 mr-4 text-center">
-                  <p className="text-[15px] font-bold w-40 truncate overflow-hidden">
-                    {personaje.id} - {personaje.name}
-                  </p>
+                  <div className="tooltip">
+                    <p className="text-[15px] font-bold w-40 truncate overflow-hidden">
+                      {personaje.id} - {personaje.name}
+                    </p>
+                    {/* tooltip */}
+                    <div className="tooltiptext flex-row justify-center w-[180px]  ">
+                      <img src={personaje.image} alt={personaje.name}
+                            className="w-[100px] rounded-full shadow-xl shadow-gray-500 m-auto" />
+                      <strong>{`${personaje.name}`}</strong><br/>
+                      <small>{` ${personaje.species}`}</small><br/><br/>
+                    </div>
+                  </div>
                   
                   <p className="text-xs w-40 truncate overflow-hidden">
                     Specie: {personaje.species}

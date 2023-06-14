@@ -9,7 +9,7 @@ export const Paginacion = ({ prevFuncion, nextFuncion, prev, next }) => {
   };
 
   return (
-    <div className="flex justify-around my-2 gap-3">
+    <div className="flex justify-around my-4 gap-3">
       {prev ? (
         <button
           className="border-cyan-400 border-2 text-cyan-400 shadow-md shadow-cyan-500/50 hover:bg-cyan-400 
