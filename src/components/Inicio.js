@@ -68,30 +68,39 @@ export const Inicio = () => {
 
       <Paginacion prevFuncion={prevFuncion} nextFuncion={nextFuncion} prev={info.prev} next={info.next} />
 
-      <div className="flex flex-row flex-wrap justify-center gap-5 ">
+      <div className="flex flex-row flex-wrap justify-center gap-x-11 gap-y-5 ">
         {personajes != null
           ? resulBusque.map((personaje) => (
               <div
                 key={personaje.id}
-                className="flex justify-end overflow-hidden relative items-center w-[290px] h-[100px] border shadow-2xl 
-                            rounded-lg bg-gray-900 text-white hover:bg-slate-100 hover:text-black"
+                className="tooltip flex justify-end overflow-visible relative items-center w-[290px] h-[100px] border shadow-2xl 
+                            rounded-lg bg-gray-900 text-white "
               >
                 <img
-                  className="absolute -left-8 shadow-xl w-[130px] rounded-full border-2 border-white"
+                  className="absolute -left-10 w-[100px] h-[100px] rounded-full border-2 border-black"
                   src={personaje.image}
                   alt={personaje.name}
-                />
+                /> 
+
+                {/* tooltip */}
+                <div className="tooltiptext flex-row justify-center w-[180px]  ">
+                  <img src={personaje.image} alt={personaje.name}
+                        className="w-[100px] rounded-full shadow-xl shadow-gray-500 m-auto" />
+                  <strong>{`${personaje.name}`}</strong><br/>
+                  <small>{` ${personaje.species}`}</small><br/><br/>
+                </div>
 
                 <div className="flex flex-col items-center gap-1 mr-4 text-center">
                   <p className="text-[15px] font-bold w-40 truncate overflow-hidden">
                     {personaje.id} - {personaje.name}
                   </p>
+                  
                   <p className="text-xs w-40 truncate overflow-hidden">
                     Specie: {personaje.species}
                   </p>
-                  <p className="text-xs w-40 truncate overflow-hidden">
+                  {/* <p className="text-xs w-40 truncate overflow-hidden">
                     Status: {personaje.status}
-                  </p>
+                  </p> */}
 
                   {/* <a className='border-gray-400 border-2 text-gray-400  hover:bg-gray-400 hover:text-white  font-bold py-[2px] px-3 text-xs rounded-md' href={`/personaje/${personaje.id}`}>Ver</a> */}
                 </div>
